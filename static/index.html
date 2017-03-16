@@ -2,8 +2,19 @@
 <html>
 <head>
 	<title>Tweets</title>
+	<link rel="stylesheet" type="text/css" href="/static/css/main.css">
 </head>
 <body>
-<h1>Tweet Time</h1>
+<input type="text" id="msg" class="long" placeholder="Give it your best tweet">
+<br/><br/>
+<input type="text" id="user" class="short" placeholder="Username">
+<br/>
+<div class="button">Send</div>
+<br/><br/><br/>
+<h1>Tweet Stream</h1>
+<div id="tweets"></div>
+<script src='/static/js/jquery.js'></script>
+<script src='/static/js/index.js'></script>
+
 </body>
 </html>
