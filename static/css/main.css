@@ -1,0 +1,54 @@
+body {
+	background: #333;
+	color: white;
+	text-align: center;
+	font-family: sans-serif;
+}
+
+input[type=text] {
+	padding: 15px;
+	border-radius: 4px;
+	font-size: 20px;
+}
+
+.long {
+	width: 500px;
+}
+.short {
+	width: 200px;
+}
+
+.button {
+	background: green;
+	margin: 30px;
+	padding: 20px;
+	display: inline-block;
+	cursor: pointer;
+	width: 150px;
+	border-radius: 4px;
+}
+
+.tweet {
+ margin: 30px;
+ padding: 20px;
+ line-height: 30px;
+ width: 300px;
+ display: inline-block;
+ border: 1px solid white;
+ position: relative;
+}
+.delBtn {
+	display: none;
+	position: absolute;
+	top: 5px;
+	right: 5px;
+	background: red;
+	color: white;
+	font-weight: 400;
+	padding: 5px 10px;
+	border-radius: 4px;
+}
+.hover {
+	display: block;
+}
+

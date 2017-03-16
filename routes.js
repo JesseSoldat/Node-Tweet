@@ -30,4 +30,17 @@ router.post('/tweets', function(req, res, next){
 	
 });
 
+router.delete('/tweets/:id', function(req, res, next){
+	db.tweets.remove({
+		_id: mongojs.ObjectId(req.params.id)
+	}, '', function(err, results){
+		if(err) {
+			res.send(err);
+		} else {
+			res.json(results)
+		}
+
+	});
+});
+
 module.exports = router;
