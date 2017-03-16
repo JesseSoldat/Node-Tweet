@@ -11,8 +11,23 @@ router.get('/tweets', function(req, res, next){
 		} else {
 			res.json(tweets);
 		}
+	});
+});
 
-	})
+router.post('/tweets', function(req, res, next){
+	let tweet = req.body;
+
+	if(!tweet.message) res.status(401).end('Please enter a message');
+	if(!tweet.user) res.status(401).end('Please include your username');
+
+	db.tweets.save(tweet, (err, result) => {
+		if(err){
+			res.send(err);
+		} else {
+			res.json(result);
+		}
+	});
+	
 });
 
 module.exports = router;
